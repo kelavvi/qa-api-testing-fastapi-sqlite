@@ -40,6 +40,6 @@ uvicorn app.main:app --reload
 - Duplicate login allowed -> fixed by checking DB before INSERT -> retested (409)
 - SQLite DB lock during writes when DB Browser was open -> identified and resolved
 
-##Next steps (autmation path)
+## Next steps (autmation path)
 - Add autmated API tests with 'pytest' + 'httpx'
 - Add CI workflow (GitHub Actions) to run tests on every push

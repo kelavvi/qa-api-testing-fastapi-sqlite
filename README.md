@@ -6,7 +6,7 @@ Mini projekt portfolio pod ścieżkę: **QA teraz -> automatyzacja w bliskiej pr
 - Testowanie API (Swagger / manual API testing)
 - Weryfikacja danych w bazie (SQLite / SQL)
 - Reguły biznesowe i poprawne status codes (200/409/422)
-- Przykład buf lifecycle: znalezienie problemu -> fix -> retest
+- Przykład bug lifecycle: znalezienie problemu -> fix -> retest
 
 ## Tech stack
 - Python, FastAPI, Uvicorn

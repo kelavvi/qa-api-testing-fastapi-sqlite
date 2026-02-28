@@ -2,8 +2,8 @@
 # Bug fixes / Findings (mini log)
 
 ## Finding 1: Empty username accepted
-**Issue:* POST '/users' accepted empty 'username' and returned 200
-**Expected:* 422 validation error
+**Issue:** POST '/users' accepted empty 'username' and returned 200
+**Expected:** 422 validation error
 **Fix:** Added validation (min_length / trimming)
 **Result:** API now returns 422 for empty username
 

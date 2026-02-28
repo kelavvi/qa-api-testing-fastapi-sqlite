@@ -15,5 +15,5 @@
 
 ## Finding 3: DB locked during insert
 **Issue:** 500 Internal Server Error when DB Browser kept SQLite open
-**Fix.Workaround:** Close DB Browser during API writes
+**Fix/Workaround:** Close DB Browser during API writes
 **Result:** POST works correctly, user is persisted in DB

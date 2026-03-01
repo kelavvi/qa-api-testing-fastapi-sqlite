@@ -1,30 +1,39 @@
-]# QA API Testing Project (FastAPI + SQLite)
+# QA API Testing Project (FastAPI + SQLite)
 
-Mini projekt portfolio pod ścieżkę: **QA teraz -> automatyzacja w bliskiej przyszłości**
+Mini portfolio project for the path: **QA now → test automation in the near future**
+Project focused on practicing real-life QA workflow for REST API testing.
 
-## Cel projektu
-- Testowanie API (Swagger / manual API testing)
-- Weryfikacja danych w bazie (SQLite / SQL)
-- Reguły biznesowe i poprawne status codes (200/409/422)
-- Przykład bug lifecycle: znalezienie problemu -> fix -> retest
+## Project goal
+- API testing (Swagger / manual testing)
+- Database validation (SQLite / SQL)
+- Business rules and correct HTTP status codes (200 / 409 / 422)
+- Bug lifecycle: finding -> fixing -> retesting
 
 ## Tech stack
-- Python, FastAPI, Uvicorn
+- Python
+- FastAPI
+- Uvicorn
 - SQLite (DB Browser for SQLite)
-- Swagger UI ('/docs')
+- Swagger UI (`/docs`)
 
-## Jak uruchomić
+## How to run
 
 ### 1) Create and activate virtual environment
+```bash
 cd ~/backend_project
 python3 -m venv venv
 source venv/bin/activate
+```
 
 ### 2) Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
 ### 3) Run the API server
+```bash
 uvicorn app.main:app --reload
+```
 
 ### 4) Open Swagger UI
 - http://127.0.0.1:8000/docs
@@ -35,15 +44,15 @@ Use Swagger UI:
 - http://127.0.0.1:8000/docs
 
 Suggested checks:
-- 'GET /health' → **200** '{ "status": "ok" }'
-- 'POST /users' valid payload → **200** + new 'id'
-- 'POST /users' missing field → **422**
-- 'POST /users' duplicate username → **409**
-- 'GET /users/{id}' existing id → **200**
-- 'GET /users/{id}' non-existing id → **404**
+- `GET /health` -> **200** `{ "status": "ok" }`
+- `POST /users` valid payload -> **200** + new `id`
+- `POST /users` missing field -> **422**
+- `POST /users` duplicate username -> **409**
+- `GET /users/{id}` existing id -> **200**
+- `GET /users/{id}` non-existing id -> **404**
 
 ## What I practiced as a QA (skills demonstrated)
-- Manual API testing in Swagger UI ('/docs')
+- Manual API testing in Swagger UI (`/docs`)
 - Designing test cases: happy path + negative tests
 - Validating HTTP status codes (200 / 409 / 422)
 - Verifying persistence using SQL queries (SQLite)
@@ -56,12 +65,10 @@ Suggested checks:
 - Create user (duplicate username / login) -> 409 conflict
 
 ## Findings & fixes (mini story)
-- Empty 'username' was accepted (returned 200) -> fixed with input validation -> retested (422)
+- Empty `username` was accepted (returned 200) -> fixed with input validation -> retested (422)
 - Duplicate login allowed -> fixed by checking DB before INSERT -> retested (409)
 - SQLite DB lock during writes when DB Browser was open -> identified and resolved
 
-## Next steps (autmation path)
-- Add automated API tests with 'pytest' + 'httpx'
+## Next steps (automation path)
+- Add automated API tests with `pytest` + `httpx`
 - Add CI workflow (GitHub Actions) to run tests on every push
-
-/

@@ -35,8 +35,8 @@ Use Swagger UI:
 - http://127.0.0.1:8000/docs
 
 Suggested checks:
-- 'GET /health' → **200**'`{ "status": "ok" '
-- 'POST /users' valid payload → **200** + ne 'id'
+- 'GET /health' → **200** '{ "status": "ok" }'
+- 'POST /users' valid payload → **200** + new 'id'
 - 'POST /users' missing field → **422**
 - 'POST /users' duplicate username → **409**
 - 'GET /users/{id}' existing id → **200**
@@ -45,7 +45,7 @@ Suggested checks:
 ## What I practiced as a QA (skills demonstrated)
 - Manual API testing in Swagger UI ('/docs')
 - Designing test cases: happy path + negative tests
-- Validating HTTP status codes (200 / 409/ 422)
+- Validating HTTP status codes (200 / 409 / 422)
 - Verifying persistence using SQL queries (SQLite)
 - Bug lifecycle: finding -> fix -> retest
 
@@ -61,7 +61,7 @@ Suggested checks:
 - SQLite DB lock during writes when DB Browser was open -> identified and resolved
 
 ## Next steps (autmation path)
-- Add autmated API tests with 'pytest' + 'httpx'
+- Add automated API tests with 'pytest' + 'httpx'
 - Add CI workflow (GitHub Actions) to run tests on every push
 
 /

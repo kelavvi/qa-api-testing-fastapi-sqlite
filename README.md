@@ -27,9 +27,9 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload
 
 ### 4) Open Swagger UI
-http://127.0.0.1:8000/docs
+- http://127.0.0.1:8000/docs
 
-/ Markdown
+/
 
 ## What I practiced as a QA (skills demonstrated)
 - Manual API testing in Swagger UI ('/docs')
@@ -53,11 +53,4 @@ http://127.0.0.1:8000/docs
 - Add autmated API tests with 'pytest' + 'httpx'
 - Add CI workflow (GitHub Actions) to run tests on every push
 
-/ Markdown
-
-'''bash
-cd ~/backend_project
-python 3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-uvicon main:app --reload
+/

@@ -29,7 +29,18 @@ uvicorn app.main:app --reload
 ### 4) Open Swagger UI
 - http://127.0.0.1:8000/docs
 
-/
+## Quick API checks (manual)
+
+Use Swagger UI:
+- http://127.0.0.1:8000/docs
+
+Suggested checks:
+- 'GET /health' → **200**'`{ "status": "ok" '
+- 'POST /users' valid payload → **200** + new'`i'`
+- 'POST /users' missing field → **422**
+- 'POST /users' duplicate username → **409**
+- 'GET /users/{id}' existing id → **200**
+- 'GET /users/{id}' non-existing id → **404**
 
 ## What I practiced as a QA (skills demonstrated)
 - Manual API testing in Swagger UI ('/docs')

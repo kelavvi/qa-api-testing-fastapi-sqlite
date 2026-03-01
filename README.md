@@ -1,4 +1,4 @@
-# QA API Testing Project (FastAPI + SQLite)
+]# QA API Testing Project (FastAPI + SQLite)
 
 Mini projekt portfolio pod ścieżkę: **QA teraz -> automatyzacja w bliskiej przyszłości**
 
@@ -14,11 +14,20 @@ Mini projekt portfolio pod ścieżkę: **QA teraz -> automatyzacja w bliskiej pr
 - Swagger UI ('/docs')
 
 ## Jak uruchomić
-'''bash
-python 3 -m venv venv
+
+### 1) Create and activate virtual environment
+cd ~/backend_project
+python3 -m venv venv
 source venv/bin/activate
-pip istall -r requirements.txt
+
+### 2) Install dependencies
+pip install -r requirements.txt
+
+### 3) Run the API server
 uvicorn app.main:app --reload
+
+### 4) Open Swagger UI
+http://127.0.0.1:8000/docs
 
 / Markdown
 
@@ -43,3 +52,12 @@ uvicorn app.main:app --reload
 ## Next steps (autmation path)
 - Add autmated API tests with 'pytest' + 'httpx'
 - Add CI workflow (GitHub Actions) to run tests on every push
+
+/ Markdown
+
+'''bash
+cd ~/backend_project
+python 3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+uvicon main:app --reload

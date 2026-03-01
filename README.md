@@ -36,7 +36,7 @@ Use Swagger UI:
 
 Suggested checks:
 - 'GET /health' → **200**'`{ "status": "ok" '
-- 'POST /users' valid payload → **200** + new'`i'`
+- 'POST /users' valid payload → **200** + ne 'id'
 - 'POST /users' missing field → **422**
 - 'POST /users' duplicate username → **409**
 - 'GET /users/{id}' existing id → **200**

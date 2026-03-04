@@ -4,11 +4,13 @@
 
 ## TC_API_001 Create user (valid)
 **Preconditions:** API running, DB available, user with username "ola" does not exist
+
 **Steps:**
 1. POST `/users` with valid JSON `{ "username":"ola", "role":"user" }`
 2. Verify status code = 200
 3. Verify response body contains:`id` (integer,>0), username = "ola", role = "user")
-4. Verify DB contains new row (SQL: `SELECT id, username, role FROM users WHERE username="ola";`)
+4. Verify DB contains new row (SQL: `SELECT id, username, role FROM users WHERE username="ola"`)
+
 **Expected result:** user is created, response data is correct and user is persisted in DB
 
 ## TC_API_002 Create user (missing field)
